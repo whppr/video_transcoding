@@ -1,7 +1,7 @@
 #
 # crop.rb
 #
-# Copyright (c) 2013-2018 Don Melton
+# Copyright (c) 2013-2019 Don Melton
 #
 
 module VideoTranscoding
@@ -50,6 +50,8 @@ module VideoTranscoding
                 Console.warn '...'
                 last_seconds = seconds
               end
+
+              line.encode! 'UTF-8', 'binary', invalid: :replace, undef: :replace, replace: ''
 
               if line =~ / crop=([0-9]+):([0-9]+):([0-9]+):([0-9]+)$/
                 d_width, d_height, d_x, d_y = $1.to_i, $2.to_i, $3.to_i, $4.to_i

@@ -1,9 +1,9 @@
 #
 # version.rb
 #
-# Copyright (c) 2013-2018 Don Melton
+# Copyright (c) 2013-2019 Don Melton
 #
 
 module VideoTranscoding
-  VERSION = '0.22.0'
+  VERSION = '0.25.2'
 end
